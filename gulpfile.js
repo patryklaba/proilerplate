@@ -29,3 +29,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('dist/js'));
 });
 
+gulp.task('default', ['styles'], function() {
+  gulp.watch('scr/css/**/*.scss', ['styles']);
+});
+
